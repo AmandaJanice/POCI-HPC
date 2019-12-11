@@ -8,82 +8,45 @@ Rainbowcrack is a general purpose implementation Phillipe Oechslin’s faster ti
 First, download the Rainbowcrack software for the Operating System of your choice in:
 * [Project Rainbowcrack](http://project-rainbowcrack.com/index.htm)
 
-### Prerequisites
+## Features
+-Full time-memory tradeoff tool suites, including rainbow table generation, sort, conversion and lookup
+-Support rainbow table of any hash algorithm
+-Support rainbow table of any charset
+-Support rainbow table in raw file format (.rt) and compact file format (.rtc)
+-Computation on multi-core processor support
+-GPU acceleration with NVIDIA GPUs (CUDA technology)
+-GPU acceleration with AMD GPUs (OpenCL technology)
+-GPU acceleration with multiple GPUs
+-Runs on Windows operating systems
+-Runs on Linux operating systems
+-Unified rainbow table file format on all supported operating systems
+-Command line user interface
+-Graphics user interface
 
-What things you need to install the software and how to install them
+## Insallation & Usage
+> Also, Hash-Buster uses some APIs for hash lookups, check the source code if you are paranoid.
 
+Hash-Buster can be run directly from the python script but I highly suggest you to install it with `make install`
+
+After the installation, you will be able to access it with `buster` command.
+
+### Cracking a single hash
+
+You don't need to specify the hash type. Hash Buster will identify and *crack* it under 3 seconds.
+
+**Usage:** `buster -s <hash>`
+### Finding hashes from a directory
+
+Yep, just specify a directory and Hash Buster will go through all the files and directories present in it, looking for hashes.
+
+**Usage:** `buster -d /root/Documents`
+### Cracking hashes from a file
+
+Hash Buster can find your hashes even if they are stored in a file like this
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+simple@gmail.com:21232f297a57a5a743894a0e4a801fc3
+{"json@gmail.com":"d033e22ae348aeb5660fc2140aec35850c4da997"}
+surrondedbytext8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918surrondedbytext
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+**Usage:** `buster -f /root/hashes.txt`
