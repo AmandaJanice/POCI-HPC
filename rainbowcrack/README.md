@@ -1,10 +1,12 @@
-# Project Title
+# Project Rainbowcrack
 
-One Paragraph of project description goes here
+Rainbowcrack is a general purpose implementation Phillipe Oechslin’s faster time-memory trade off technique that cracks hashes using rainbow tables. A time-memory tradeoff hash cracker needs a pre-computation stage, at the time all plaintext/hash pairs within the selected hash algorithm, charset, plaintext length are computed and these results are stored in the rainbow tables.
+
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+First, download the Rainbowcrack software for the Operating System of your choice in:
+* [Project Rainbowcrack](http://project-rainbowcrack.com/index.htm)
 
 ### Prerequisites
 
