@@ -24,29 +24,21 @@ First, download the Rainbowcrack software for the Operating System of your choic
 - Graphics user interface
 
 ## Insallation & Usage
-> Also, Hash-Buster uses some APIs for hash lookups, check the source code if you are paranoid.
 
-Hash-Buster can be run directly from the python script but I highly suggest you to install it with `make install`
-
-After the installation, you will be able to access it with `buster` command.
-
-### Cracking a single hash
-
-You don't need to specify the hash type. Hash Buster will identify and *crack* it under 3 seconds.
-
-**Usage:** `buster -s <hash>`
-### Finding hashes from a directory
-
-Yep, just specify a directory and Hash Buster will go through all the files and directories present in it, looking for hashes.
-
-**Usage:** `buster -d /root/Documents`
-### Cracking hashes from a file
-
-Hash Buster can find your hashes even if they are stored in a file like this
+After downloading the project Rainbowcrack software, extract it to a desired folder. To start cracking some hashes, we need to generate some rainbow tables first, so navigate to the folder containing the source code and use the following command in a command line to generate the rainbow tables needed to store the different hash codes/plain text pairs: 
 ```
-simple@gmail.com:21232f297a57a5a743894a0e4a801fc3
-{"json@gmail.com":"d033e22ae348aeb5660fc2140aec35850c4da997"}
-surrondedbytext8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918surrondedbytext
+./rtgen <hash algorithm> <char set> <plain text minimum> <plain text maximum> <table index> <keyspace>
+```
+Running these command several times with different parameters will generate sufficient rainbow tables to carry out the hash cracking. Now we have to sort our rainbow tables with the following command:
+```
+./rtsort .
+```
+Now, we are ready to crack some hashes and to analyze the performance of different hash algorithms.
+
+### Cracking a hash
+
+To crack a hash code using the rainbow tables that were generated above, run the following command in a command line:
+```
+./rtcrack . -h <hash code>
 ```
 
-**Usage:** `buster -f /root/hashes.txt`
