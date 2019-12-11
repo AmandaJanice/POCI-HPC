@@ -9,19 +9,19 @@ First, download the Rainbowcrack software for the Operating System of your choic
 * [Project Rainbowcrack](http://project-rainbowcrack.com/index.htm)
 
 ## Features
--Full time-memory tradeoff tool suites, including rainbow table generation, sort, conversion and lookup
--Support rainbow table of any hash algorithm
--Support rainbow table of any charset
--Support rainbow table in raw file format (.rt) and compact file format (.rtc)
--Computation on multi-core processor support
--GPU acceleration with NVIDIA GPUs (CUDA technology)
--GPU acceleration with AMD GPUs (OpenCL technology)
--GPU acceleration with multiple GPUs
--Runs on Windows operating systems
--Runs on Linux operating systems
--Unified rainbow table file format on all supported operating systems
--Command line user interface
--Graphics user interface
+- Full time-memory tradeoff tool suites, including rainbow table generation, sort, conversion and lookup
+- Support rainbow table of any hash algorithm
+- Support rainbow table of any charset
+- Support rainbow table in raw file format (.rt) and compact file format (.rtc)
+- Computation on multi-core processor support
+- GPU acceleration with NVIDIA GPUs (CUDA technology)
+- GPU acceleration with AMD GPUs (OpenCL technology)
+- GPU acceleration with multiple GPUs
+- Runs on Windows operating systems
+- Runs on Linux operating systems
+- Unified rainbow table file format on all supported operating systems
+- Command line user interface
+- Graphics user interface
 
 ## Insallation & Usage
 > Also, Hash-Buster uses some APIs for hash lookups, check the source code if you are paranoid.
