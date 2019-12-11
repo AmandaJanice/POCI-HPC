@@ -1,4 +1,4 @@
-Features:
+Hash Buster Features:
 	1) Automatic hash type identification
 	2) Supports MD5, SHA1, SHA256, SHA384, SHA512
 	3) Can extract & crack hashes from a file
